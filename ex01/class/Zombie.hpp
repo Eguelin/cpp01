@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 17:57:49 by eguelin           #+#    #+#             */
-/*   Updated: 2023/10/03 20:00:46 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/10/04 14:42:39 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
 	Zombie( void );
 	~Zombie( void );
 
-	void	announce( void );
+	void	announce( void ) const;
 	void	setname( std::string name );
 
 };
