@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 17:57:49 by eguelin           #+#    #+#             */
-/*   Updated: 2023/10/03 18:44:31 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/10/03 19:58:42 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ private:
 public:
 
 	Zombie( std::string name );
-	~Zombie();
+	~Zombie( void );
 
-	void announce( void );
+	void	announce( void );
 
 };
 

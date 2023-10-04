@@ -6,7 +6,7 @@
 #    By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/30 15:03:56 by eguelin           #+#    #+#              #
-#    Updated: 2023/10/03 19:13:24 by eguelin          ###   ########lyon.fr    #
+#    Updated: 2023/10/03 20:23:41 by eguelin          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ OUT_DIR	= build/
 CLS_DIR = class/
 INC_DIR	= include/
 SRC_DIR	= src/
-NAME	= BraiiiiiiinnnzzzZ
+NAME	= zombie
 CC		= c++
 CFLAGS	= -Wall -Werror -Wextra -std=c++98 -I $(INC_DIR) -I $(CLS_DIR)
 RM		= rm -rf
