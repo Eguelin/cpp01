@@ -6,3 +6,6 @@ zombie
 horde
 reference
 violence
+in
+*.replace
+ft_sed
