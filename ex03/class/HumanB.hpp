@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 11:24:49 by eguelin           #+#    #+#             */
-/*   Updated: 2023/10/04 14:38:15 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/10/04 18:03:19 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ class HumanB
 		std::string	_name;
 		Weapon		*_weapon;
 	public:
-		HumanB( std::string name );
-		~HumanB( void );
-		void	attack( void ) const;
-		void	setWeapon( Weapon &weapon );
+		HumanB(std::string name);
+		~HumanB(void);
+		void	attack(void) const;
+		void	setWeapon(Weapon &weapon);
 };
 
 #endif

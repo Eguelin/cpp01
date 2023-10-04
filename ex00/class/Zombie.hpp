@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 17:57:49 by eguelin           #+#    #+#             */
-/*   Updated: 2023/10/04 14:43:03 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/10/04 18:03:19 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ private:
 
 public:
 
-	Zombie( std::string name );
-	~Zombie( void );
+	Zombie(std::string name);
+	~Zombie(void);
 
-	void	announce( void ) const;
+	void	announce(void) const;
 
 };
 
-Zombie*	newZombie( std::string name );
-void	randomChump( std::string name );
+Zombie*	newZombie(std::string name);
+void	randomChump(std::string name);
 
 #endif

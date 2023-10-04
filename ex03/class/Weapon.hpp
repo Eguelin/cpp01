@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 11:25:08 by eguelin           #+#    #+#             */
-/*   Updated: 2023/10/04 14:41:23 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/10/04 18:06:19 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ class Weapon
 	private:
 		std::string	_type;
 	public:
-		Weapon( std::string type );
-		~Weapon( void );
-		const std::string	&getType( void ) const;
-		void				setType( std::string type );
+		Weapon(std::string type);
+		~Weapon(void);
+		const std::string	&getType(void) const;
+		void				setType(std::string type);
 };
 
 #endif
