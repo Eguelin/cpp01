@@ -6,7 +6,7 @@
 #    By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/30 15:03:56 by eguelin           #+#    #+#              #
-#    Updated: 2023/10/03 14:52:37 by eguelin          ###   ########lyon.fr    #
+#    Updated: 2023/10/04 19:03:05 by eguelin          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ OUT_DIR	= build/
 CLS_DIR = class/
 INC_DIR	= include/
 SRC_DIR	= src/
-NAME	= ...
+NAME	= harl
 CC		= c++
 CFLAGS	= -Wall -Werror -Wextra -std=c++98 -I $(INC_DIR) -I $(CLS_DIR)
 RM		= rm -rf
@@ -37,19 +37,13 @@ CLEAN_MSG		= "$(RED)Cleaning $(NAME) $(WHITE)done on $(YELLOW)$(shell date +'%Y-
 FULL_CLEAN_MSG	= "$(PURPLE)Full cleaning $(NAME) $(WHITE)done on $(YELLOW)$(shell date +'%Y-%m-%d %H:%M:%S')$(WHITE)"
 
 #Sources
-INC_FILES		= .hpp
+INC_CLS			= Harl.hpp
 
-INC_CLS			= .hpp
+HEADERS			= $(addprefix $(CLS_DIR), $(INC_CLS))
 
-HEADERS			= $(addprefix $(INC_DIR), $(INC_FILES)) $(addprefix $(CLS_DIR), $(INC_CLS))
+ALL_FILES		= main.cpp
 
-ALL_FILES		= .cpp
-
-# ..._DIR			= ../
-# ..._FILES		= .cpp
-# ALL_FILES		+= $(addprefix $(EXEC_DIR)$(..._DIR), $(..._FILES))
-
-CLS_FILES		= .cpp
+CLS_FILES		= Harl.cpp
 
 OBJS			+= $(addprefix $(OUT_DIR), $(ALL_FILES:.cpp=.o) $(CLS_FILES:.cpp=.o))
 
