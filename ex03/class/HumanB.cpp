@@ -6,16 +6,14 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 11:25:00 by eguelin           #+#    #+#             */
-/*   Updated: 2023/10/05 12:23:15 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/11/17 16:17:22 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB( std::string name )
+HumanB::HumanB( std::string name ): _name(name), _weapon(NULL)
 {
-	HumanB::_name = name;
-	HumanB::_weapon = NULL;
 }
 
 HumanB::~HumanB( void )

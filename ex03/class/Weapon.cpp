@@ -6,15 +6,14 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 11:25:03 by eguelin           #+#    #+#             */
-/*   Updated: 2023/10/05 12:21:47 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/11/17 16:40:03 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
-Weapon::Weapon( std::string type )
+Weapon::Weapon( std::string type ): _type(type)
 {
-	Weapon::_type = type;
 }
 
 Weapon::~Weapon( void )
