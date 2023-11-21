@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 17:32:10 by eguelin           #+#    #+#             */
-/*   Updated: 2023/10/05 13:08:00 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/11/21 16:31:31 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ std::string ft_replace( std::string str, std::string const word, std::string con
 	{
 		str.erase(pos, word.size());
 		str.insert(pos, new_word);
-		pos = str.find(word);
+		pos = str.find(word, pos + word.length());
 	}
 
 	return (str);

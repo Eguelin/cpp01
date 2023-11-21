@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 15:47:38 by eguelin           #+#    #+#             */
-/*   Updated: 2023/10/05 13:11:46 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/11/21 16:45:41 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,12 @@ int main( int argc, char const **argv )
 			std::cerr << "too many arguments" << std::endl;
 		if (in_file.is_open())
 			in_file.close();
+		return (1);
+	}
+
+	if (argv[2][0] == '\0')
+	{
+		std::cerr << "char 0: no previous regular expression" << std::endl;
 		return (1);
 	}
 
