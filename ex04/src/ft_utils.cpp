@@ -6,24 +6,33 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 17:32:10 by eguelin           #+#    #+#             */
-/*   Updated: 2023/11/21 16:31:31 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/11/22 19:04:00 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_utils.hpp"
 
-std::string	ft_file_to_str( std::ifstream &in_file )
+int	ft_file_to_str( const char *name, std::string &str )
 {
-	std::string		file;
+	std::ifstream	in_file(name);
 	std::string		line;
 
-    while(std::getline(in_file, line))
-		file += line + "\n";
+	if (!in_file.is_open())
+	{
+		std::cerr << "failure to open input file" << std::endl;
 
-	return (file);
+		return (1);
+	}
+
+    while(std::getline(in_file, line))
+		str += line + "\n";
+
+	in_file.close();
+
+	return (0);
 }
 
-std::string ft_replace( std::string str, std::string const word, std::string const new_word )
+std::string ft_replace( std::string str, const std::string word, const std::string new_word )
 {
 	std::size_t pos = str.find(word);
 
@@ -37,7 +46,7 @@ std::string ft_replace( std::string str, std::string const word, std::string con
 	return (str);
 }
 
-int	ft_creat_new_file( char const *name, std::string const str )
+int	ft_creat_new_file( const char *name, const std::string str )
 {
 	std::ofstream	out_file(name);
 

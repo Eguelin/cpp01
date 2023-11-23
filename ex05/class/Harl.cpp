@@ -6,50 +6,70 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 19:04:25 by eguelin           #+#    #+#             */
-/*   Updated: 2023/10/05 20:04:44 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/11/23 17:59:54 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
-#include <string>
+
+/* ************************************************************************** */
+/*                         Constructors & Destructors                         */
+/* ************************************************************************** */
 
 Harl::Harl( void )
 {
+	std::cout << BLACK_T << "Harl constructor called" << RESET_T << std::endl;
 }
 
 Harl::~Harl( void )
 {
+	std::cout << BLACK_T << "Harl destructor called" << RESET_T << std::endl;
 }
+
+/* ************************************************************************** */
+/*                           Private member functions                         */
+/* ************************************************************************** */
 
 void	Harl::debug( void )
 {
-	std::cout << "[DEBUG]\nI love having extra bacon for my 7XL-double-cheese-triple-pickle-specialketchup"\
-	" burger.\nI really do!" << std::endl;
+	std::cout << "[DEBUG]" << std::endl;
+	std::cout << "I love having extra bacon for my 7XL-double-cheese-triple-pickle-specialketchup burger." << std::endl;
+	std::cout << "I really do!" << std::endl;
 }
 
 void	Harl::info( void )
 {
-	std::cout << "[INFO]\nI cannot believe adding extra bacon costs more money.\nYou didn't putenough"\
-	" bacon in my burger!\nIf you did, I wouldn't be asking for more!"<< std::endl;
+	std::cout << "[INFO]" << std::endl;
+	std::cout << "I cannot believe adding extra bacon costs more money." << std::endl;
+	std::cout << "You didn't putenough bacon in my burger!" << std::endl;
+	std::cout << "If you did, I wouldn't be asking for more!"<< std::endl;
 }
 
 void	Harl::warning( void )
 {
-	std::cout << "[WARNING]\nI think I deserve to have some extra bacon for free.\nI've been coming for"\
-	"years whereas you started working here since last month."<< std::endl;
+	std::cout << "[WARNING]" << std::endl;
+	std::cout << "I think I deserve to have some extra bacon for free." << std::endl;
+	std::cout << "I've been coming for years whereas you started working here since last month."<< std::endl;
 }
 
 void	Harl::error( void )
 {
-	std::cout << "[ERROR]\nThis is unacceptable!\nI want to speak to the manager now."<< std::endl;
+	std::cout << "[ERROR]" << std::endl;
+	std::cout << "This is unacceptable!" << std::endl;
+	std::cout << "I want to speak to the manager now."<< std::endl;
 }
+
+/* ************************************************************************** */
+/*                           Public member functions                          */
+/* ************************************************************************** */
 
 void	Harl::complain( std::string level )
 {
-	void		(Harl::*ft[])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	void		(Harl::*ft[])(void) = {&Harl::debug, &Harl::info,
+									&Harl::warning, &Harl::error};
 	std::string	lvl[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
-	for (size_t i = 0; i < sizeof(lvl) / sizeof(*lvl) ; i++)
+	for (int i = 0; i < 4 ; i++)
 	{
 		if (!level.compare(lvl[i]))
 		{

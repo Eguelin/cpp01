@@ -6,19 +6,38 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 11:25:00 by eguelin           #+#    #+#             */
-/*   Updated: 2023/11/17 16:17:22 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/11/23 17:59:54 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
+/* ************************************************************************** */
+/*                         Constructors & Destructors                         */
+/* ************************************************************************** */
+
 HumanB::HumanB( std::string name ): _name(name), _weapon(NULL)
 {
+	std::cout << BLACK_T << "HumanB constructor called" << RESET_T << std::endl;
 }
 
 HumanB::~HumanB( void )
 {
+	std::cout << BLACK_T << "HumanB destructor called" << RESET_T << std::endl;
 }
+
+/* ************************************************************************** */
+/*                                   Setters                                  */
+/* ************************************************************************** */
+
+void	HumanB::setWeapon( Weapon &weapon )
+{
+	HumanB::_weapon = &weapon;
+}
+
+/* ************************************************************************** */
+/*                           Public member functions                          */
+/* ************************************************************************** */
 
 void	HumanB::attack( void ) const
 {
@@ -28,7 +47,3 @@ void	HumanB::attack( void ) const
 		std::cout << HumanB::_name << " attacks with their " << HumanB::_weapon->getType() << std::endl;
 }
 
-void	HumanB::setWeapon( Weapon &weapon )
-{
-	HumanB::_weapon = &weapon;
-}

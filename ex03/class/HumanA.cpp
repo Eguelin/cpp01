@@ -6,19 +6,29 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 11:24:53 by eguelin           #+#    #+#             */
-/*   Updated: 2023/11/17 16:16:28 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/11/23 17:59:54 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 
+/* ************************************************************************** */
+/*                         Constructors & Destructors                         */
+/* ************************************************************************** */
+
 HumanA::HumanA( std::string name, Weapon &weapon ): _name(name), _weapon(weapon)
 {
+	std::cout << BLACK_T << "HumanA constructor called" << RESET_T << std::endl;
 }
 
 HumanA::~HumanA( void )
 {
+	std::cout << BLACK_T << "HumanA destructor called" << RESET_T << std::endl;
 }
+
+/* ************************************************************************** */
+/*                           Public member functions                          */
+/* ************************************************************************** */
 
 void	HumanA::attack( void ) const
 {
