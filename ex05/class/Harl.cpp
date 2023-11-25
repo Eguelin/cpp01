@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 19:04:25 by eguelin           #+#    #+#             */
-/*   Updated: 2023/11/23 17:59:54 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/11/25 12:16:38 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 
 Harl::Harl( void )
 {
-	std::cout << BLACK_T << "Harl constructor called" << RESET_T << std::endl;
+	std::cout << GREEN_T << "Harl constructor called" << RESET_T << std::endl;
 }
 
 Harl::~Harl( void )
 {
-	std::cout << BLACK_T << "Harl destructor called" << RESET_T << std::endl;
+	std::cout << RED_T << "Harl destructor called" << RESET_T << std::endl;
 }
 
 /* ************************************************************************** */

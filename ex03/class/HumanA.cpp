@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 11:24:53 by eguelin           #+#    #+#             */
-/*   Updated: 2023/11/23 17:59:54 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/11/25 12:16:38 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 
 HumanA::HumanA( std::string name, Weapon &weapon ): _name(name), _weapon(weapon)
 {
-	std::cout << BLACK_T << "HumanA constructor called" << RESET_T << std::endl;
+	std::cout << GREEN_T << "HumanA constructor called" << RESET_T << std::endl;
 }
 
 HumanA::~HumanA( void )
 {
-	std::cout << BLACK_T << "HumanA destructor called" << RESET_T << std::endl;
+	std::cout << RED_T << "HumanA destructor called" << RESET_T << std::endl;
 }
 
 /* ************************************************************************** */
