@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 17:32:10 by eguelin           #+#    #+#             */
-/*   Updated: 2023/11/22 19:04:00 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/11/26 16:42:53 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ std::string ft_replace( std::string str, const std::string word, const std::stri
 	return (str);
 }
 
-int	ft_creat_new_file( const char *name, const std::string str )
+int	ft_create_new_file( const char *name, const std::string str )
 {
 	std::ofstream	out_file(name);
 

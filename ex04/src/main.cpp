@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 15:47:38 by eguelin           #+#    #+#             */
-/*   Updated: 2023/11/22 19:15:14 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/11/26 16:43:21 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int main( int argc, char const **argv )
 	new_str = ft_replace(str, argv[2], argv[3]);
 	new_name = std::string(argv[1]) + ".replace";
 
-	if (ft_creat_new_file(new_name.c_str(), new_str))
+	if (ft_create_new_file(new_name.c_str(), new_str))
 		return (1);
 
 	return (0);
