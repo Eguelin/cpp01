@@ -6,7 +6,7 @@
 #    By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/30 15:03:56 by eguelin           #+#    #+#              #
-#    Updated: 2023/11/24 17:29:10 by eguelin          ###   ########lyon.fr    #
+#    Updated: 2023/11/26 17:22:09 by eguelin          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,7 @@ FULL_CLEAN_MSG	= "$(PURPLE)Full cleaning $(NAME) $(RESET)done on $(YELLOW)$(shel
 
 ALL_FILES	= main.cpp
 
-OBJ_FILES	= $(addprefix $(OUT_DIR), $(ALL_FILES:.cpp=.o) $(CLS_FILES:.cpp=.o))
+OBJ_FILES	= $(addprefix $(OUT_DIR), $(ALL_FILES:.cpp=.o))
 
 # **************************************************************************** #
 #                                     Rules                                    #
@@ -65,9 +65,6 @@ $(NAME): $(OBJ_FILES)
 	echo $(COMP_MSG)
 
 $(OUT_DIR)%.o: $(SRC_DIR)%.cpp | $(OUT_DIR)
-	$(CC) $(CFLAGS) -c $< -o $@
-
-$(OUT_DIR)%.o: $(CLS_DIR)%.cpp | $(OUT_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
