@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 11:25:03 by eguelin           #+#    #+#             */
-/*   Updated: 2023/11/25 12:16:38 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/11/29 13:50:49 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 
 Weapon::Weapon( std::string type ): _type(type)
 {
-	std::cout << GREEN_T << "Weapon constructor called" << RESET_T << std::endl;
+	std::cout << GREEN_T << "Weapon constructor called" << DEFAULT_T << std::endl;
 }
 
 Weapon::~Weapon( void )
 {
-	std::cout << RED_T << "Weapon destructor called" << RESET_T << std::endl;
+	std::cout << RED_T << "Weapon destructor called" << DEFAULT_T << std::endl;
 }
 
 /* ************************************************************************** */
